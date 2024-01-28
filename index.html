@@ -1,72 +1,76 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Información de la IP del Cliente</title>
-  <!-- Enlace a los estilos de Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body {
-      background-color: #f8f9fa;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tabla de Datos</title>
+    <!-- Agregar Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        /* Estilos personalizados para la tabla */
+        table {
+            width: 100%;
+            margin-bottom: 1rem;
+            color: #212529;
+            background-color: #f8f9fa;
+            border-collapse: collapse;
+        }
 
-    .container {
-      margin-top: 50px;
-    }
+        th,
+        td {
+            padding: 0.75rem;
+            text-align: center;
+            border: 1px solid #dee2e6;
+        }
 
-    .table th, .table td {
-      text-align: center;
-    }
+        th {
+            background-color: #007bff;
+            color: #ffffff;
+        }
 
-    .table th {
-      background-color: black;
-      color: white;
-    }
-
-    .table-striped tbody tr:nth-of-type(odd) {
-      background-color: #f2f2f2;
-    }
-  </style>
+        tbody tr:hover {
+            background-color: rgba(0, 123, 255, 0.1);
+        }
+    </style>
 </head>
+
 <body>
 
-<div class="container">
-  <h1 class="text-center">Información de la IP del Cliente</h1>
+    <div class="container mt-5">
+        <h2 class="mb-4">Datos de Muestra</h2>
 
-  <table class="table table-striped mt-4">
-    <thead>
-      <tr>
-        <th>IP</th>
-        <th>País</th>
-        <th>Continente</th>
-        <th>Zona Horaria</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td id="ip"></td>
-        <td id="pais"></td>
-        <td id="continente"></td>
-        <td id="zona_horaria"></td>
-      </tr>
-      
-      <!-- Agrega más filas de datos de muestra según sea necesario -->
-    </tbody>
-  </table>
-</div>
+        <!-- Tabla Bootstrap -->
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>IP</th>
+                    <th>PAÍS</th>
+                    <th>CONTINENTE</th>
+                    <th>ZONA HORARIA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Datos de muestra -->
+                <tr>
+                    <td id="ip">-</td>
+                    <td id="pais">-</td>
+                    <td id="continente">-</td>
+                    <td id="zona_horaria">-</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
-<!-- Enlaces a los scripts de Bootstrap y jQuery -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- Agregar Bootstrap JS y dependencias -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
-<script src="js/main.js"></script>
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-
-
-
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>
+
+
