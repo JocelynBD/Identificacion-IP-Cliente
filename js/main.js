@@ -1,5 +1,4 @@
 //alert ("Hola mundo");
-header('Access-Control-Allow-Origin: *');
 
 let ip = document.getElementById("ip");
 let pais = document.getElementById("pais");
@@ -9,9 +8,7 @@ let zona_horaria = document.getElementById("zona_horaria");
 const solicitudAPI = () => {
   // Hacer una petición para un usuario con ID especifico
 axios
-
 .get("https://itp-scr-jrp-01.000webhostapp.com/php-geoip-api/index.php")
-
   .then(function (response) {
     // manejar respuesta exitosa
     console.log (response.data);
@@ -27,20 +24,14 @@ axios
   .finally(function () {
     // siempre sera executado
   });
- 
+
+
 };
 
 //llama al evento LOAD cada vez que se actualiza la pagina 
 //y llama a la version solicitudAPI que tiene la rutina
 //de llamar a API desde Axios
 window.addEventListener('load',solicitudAPI );
-
-
-
-
-
-
-
 
 
 
