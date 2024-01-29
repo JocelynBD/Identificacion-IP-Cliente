@@ -1,5 +1,4 @@
 //alert ("Hola mundo");
-header('Access-Control-Allow-Origin: *');
 let ip = document.getElementById("ip");
 let pais = document.getElementById("pais");
 let continente = document.getElementById("continente");
@@ -18,20 +17,19 @@ axios
     zona_horaria.innerHTML = response.data.zona_horaria;
   })
   .catch(function (error) {
-    // manejar error
     console.log(error);
   })
   .finally(function () {
     // siempre sera executado
   });
-
-
 };
 
 //llama al evento LOAD cada vez que se actualiza la pagina 
 //y llama a la version solicitudAPI que tiene la rutina
 //de llamar a API desde Axios
-window.addEventListener('load',solicitudAPI );
+window.addEventListener('load',function () {
+  solicitudAPI();
+});
 
 
 
