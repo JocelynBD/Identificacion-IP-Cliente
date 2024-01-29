@@ -1,5 +1,5 @@
 //alert ("Hola mundo");
-
+header('Access-Control-Allow-Origin: *');
 let ip = document.getElementById("ip");
 let pais = document.getElementById("pais");
 let continente = document.getElementById("continente");
